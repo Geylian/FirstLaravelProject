@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+
+*/
 
 Route::get('/hello', function () {
     return 'Hello World';
@@ -28,3 +31,5 @@ Route::get('/about', function () {
 Route::get('/users/{name}/{age}', function ($name, $age) {
     return 'Hello ' . $name . ', you are ' . $age . ' years old ;p';
 });
+
+Route::get('/', 'PagesController@index');
