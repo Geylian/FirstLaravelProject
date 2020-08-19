@@ -24,12 +24,14 @@ Route::get('/hello', function () {
     return 'Hello World';
 });
 
-Route::get('/about', function () {
-    return view('pages.about');
-});
+// Route::get('/about', function () {
+//     return view('pages.about');
+// });
 
 Route::get('/users/{name}/{age}', function ($name, $age) {
     return 'Hello ' . $name . ', you are ' . $age . ' years old ;p';
 });
 
 Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
