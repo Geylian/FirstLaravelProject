@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return 'Hello World';
 });
+
+Route::get('/about', function () {
+    return view('pages.about');
+});
+
+Route::get('/users/{name}/{age}', function ($name, $age) {
+    return 'Hello ' . $name . ', you are ' . $age . ' years old ;p';
+});
